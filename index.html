@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gaegu&family=Jersey+10+Charted&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      img {
+        width: 300px;
+        height: 300px;
+      }
+      body {
+        background-image: url(img/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        position: relative;
+        margin-top: 200px;
+      }
+      h3 {
+        font-family: "Gaegu", sans-serif;
+        font-size: 50px;
+      }
+      button {
+        width: 100px;
+        height: 40px;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+      #reset {
+        background-color: red;
+        color: #fff;
+        border: 1px solid red;
+      }
+      form {
+        line-height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>숫자맞추기 게임</h3>
+    <img id="changeImg" src="img/뾰로롱.jpg" /><br />
+    <span>결과화면 : </span><span id="result">up / down / bingo</span>
+    <form>
+      <label>숫자입력 : </label>
+      <input
+        id="user"
+        type="number"
+        placeholder="1부터 100까지 숫자를 입력하세요."
+      />
+      <div id="chance">남은 기회 : 5</div>
+      <button id="play">시작</button>
+      <button id="reset">다시하기</button>
+    </form>
+    <script src="custom.js"></script>
+  </body>
+</html>
+<!-- 
+    1. html요소 가지고 오기 (input, button, result)
+    2. 숫자만들기(random)
+    3. user입력 - play버튼을 클릭하면 
+    4. 컴퓨터숫자와 유저숫자를 비교
+    5. 컴퓨터숫자 > 유저숫자 up
+    6. 컴퓨터숫자 < 유저숫자 down
+    7. 컴퓨터숫자 == 유저숫자 bingo
+    
+ -->
